@@ -1,5 +1,5 @@
 <?php
-namespace Katzgrau\KLogger;
+namespace renmlp\Logger;
 
 use DateTime;
 use RuntimeException;
@@ -12,14 +12,15 @@ use Psr\Log\LogLevel;
  * Originally written for use with wpSearch
  *
  * Usage:
- * $log = new Katzgrau\KLogger\Logger('/var/log/', Psr\Log\LogLevel::INFO);
+ * $log = new renmlp\Logger\Logger('/var/log/', Psr\Log\LogLevel::INFO);
  * $log->info('Returned a million search results'); //Prints to the log file
  * $log->error('Oh dear.'); //Prints to the log file
  * $log->debug('x = 5'); //Prints nothing due to current severity threshhold
  *
  * @author  Kenny Katzgrau <katzgrau@gmail.com>
+ * @edit    René Müller <mail@rene-mueller.xyz>
  * @since   July 26, 2008
- * @link    https://github.com/katzgrau/KLogger
+ * @link    https://github.com/renmlp/Logger
  * @version 1.0.0
  */
 
@@ -45,6 +46,8 @@ class Logger extends AbstractLogger
         'prefix'         => 'log_',
         'logFormat'      => false,
         'appendContext'  => true,
+        'printLevel'     => [LogLevel::EMERGENCY, LogLevel::ALERT, LogLevel::CRITICAL,
+                             LogLevel::ERROR, LogLevel::WARNING, LogLevel::INFO]
     );
 
     /**
@@ -213,6 +216,14 @@ class Logger extends AbstractLogger
         }
         $message = $this->formatMessage($level, $message, $context);
         $this->write($message);
+        $this->print($message, $level);
+    }
+
+    private function print($message, $level)
+    {
+        if (in_array($level, $this->options['printLevel'])) {
+            echo $message;
+        }
     }
 
     /**
