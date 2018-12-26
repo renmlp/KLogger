@@ -1,5 +1,5 @@
 {
-    "name": "katzgrau/klogger",
+    "name": "renmlp/klogger",
     "version": "1.2.1",
     "description": "A Simple Logging Class",
     "keywords": ["logging"],
@@ -19,6 +19,10 @@
         {
             "name": "Dan Horrigan",
             "email": "dan@dhorrigan.com"
+        },
+        {
+            "name": "Rene Müller",
+            "email": "mail@rene-mueller.xyz"
         }
     ],
     "autoload": {
