@@ -18,7 +18,7 @@ If you need a logger that supports PHP < 5.3, see [past releases](https://github
 From the Command Line:
 
 ```
-composer require katzgrau/klogger:dev-master
+composer require renmlp/klogger:dev-master
 ```
 
 In your `composer.json`:
@@ -26,7 +26,7 @@ In your `composer.json`:
 ``` json
 {
     "require": {
-        "katzgrau/klogger": "dev-master"
+        "renmlp/klogger": "dev-master"
     }
 }
 ```
@@ -46,6 +46,10 @@ $users = [
     [
         'name' => 'Dan Horrigan',
         'username' => 'dhrrgn',
+    ],
+    [
+        'name' => 'Rene Müller',
+        'username' => 'renmlp',
     ],
 ];
 
@@ -68,6 +72,10 @@ $logger->debug('Got these users from the Database.', $users);
     1: array(
         'name' => 'Dan Horrigan',
         'username' => 'dhrrgn',
+    ) 
+    1: array(
+        'name' => 'Rene Müller',
+        'username' => 'renmlp',
     )
 ```
 
