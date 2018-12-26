@@ -1,6 +1,6 @@
 # KLogger: Simple Logging for PHP
 
-A project written by [Kenny Katzgrau](http://twitter.com/katzgrau) and [Dan Horrigan](http://twitter.com/dhrrgn).
+A project written by [Kenny Katzgrau](http://twitter.com/katzgrau), [Dan Horrigan](http://twitter.com/dhrrgn) and [Rene Müller](http://twitter.com/renmlp).
 
 ## About
 
