@@ -1,6 +1,8 @@
 # KLogger: Simple Logging for PHP
 
-A project written by [Kenny Katzgrau](http://twitter.com/katzgrau), [Dan Horrigan](http://twitter.com/dhrrgn) and [Rene Müller](http://twitter.com/renmlp).
+A project written by [Kenny Katzgrau](http://twitter.com/katzgrau) and [Dan Horrigan](http://twitter.com/dhrrgn).
+
+Modified by [Rene Müller](http://twitter.com/renmlp).
 
 ## About
 
@@ -47,10 +49,6 @@ $users = [
         'name' => 'Dan Horrigan',
         'username' => 'dhrrgn',
     ],
-    [
-        'name' => 'Rene Müller',
-        'username' => 'renmlp',
-    ],
 ];
 
 $logger = new Katzgrau\KLogger\Logger(__DIR__.'/logs');
@@ -72,10 +70,6 @@ $logger->debug('Got these users from the Database.', $users);
     1: array(
         'name' => 'Dan Horrigan',
         'username' => 'dhrrgn',
-    ) 
-    1: array(
-        'name' => 'Rene Müller',
-        'username' => 'renmlp',
     )
 ```
 
